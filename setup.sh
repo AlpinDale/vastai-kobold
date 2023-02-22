@@ -10,7 +10,7 @@ git clone https://github.com/henk717/KoboldAI
 cd KoboldAI
 
 # Install Rust and Cargo
-apt-get install -y rustc cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install bore-cli using Cargo
 cargo install bore-cli
