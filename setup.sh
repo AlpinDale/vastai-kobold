@@ -20,6 +20,7 @@ fi
 mkdir AI && cd AI
 git clone https://github.com/henk717/KoboldAI
 cd KoboldAI
+tmux
 tmux split-window -v
 sudo apt-get install -y rustc cargo
 cargo install bore-cli
