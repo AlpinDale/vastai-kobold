@@ -2,7 +2,7 @@
 if ! dpkg -s nvidia-driver >/dev/null 2>&1; then
   echo "Installing Nvidia drivers..."
   apt-get update
-  Apt-get install -y nvidia-driver
+  apt-get install -y nvidia-driver
 fi
 if ! dpkg -s cuda >/dev/null 2>&1; then
   echo "Installing CUDA..."
