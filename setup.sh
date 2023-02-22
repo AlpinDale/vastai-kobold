@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 if ! dpkg -s nvidia-driver >/dev/null 2>&1; then
   echo "Installing Nvidia drivers..."
@@ -22,9 +21,7 @@ git clone https://github.com/henk717/KoboldAI
 cd KoboldAI
 tmux new-session -d -s asession
 tmux send-keys 'tmux split-window -v' C-m
-tmux send-keys 'apt-get install -y rustc cargo' C-m
-tmux send-keys 'cargo install bore-cli' C-m
-tmux send-keys 'bore local 5000 --to bore.pub' C-m
-tmux send-keys 'tmux select-pane -t 0' C-m
-tmux send-keys './play.sh' C-m
-```
+tmux send-keys -t 1 'sudo apt-get install -y rustc cargo' C-m
+tmux send-keys -t 1 'cargo install bore-cli' C-m
+tmux send-keys -t 1 'bore local 5000 --to bore.pub' C-m
+tmux send-keys -t 0 './play.sh' C-m
