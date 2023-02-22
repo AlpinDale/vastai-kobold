@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt update && apt upgrade && apt install build-essential
 # Create directory AI and navigate into it
 mkdir AI && cd AI
 
