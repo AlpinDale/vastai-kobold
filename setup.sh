@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt upgrade && apt install build-essential
+apt update && apt upgrade -y && apt install build-essential -y
 # Create directory AI and navigate into it
 mkdir AI && cd AI
 
@@ -13,7 +13,7 @@ cd KoboldAI
 # Install Rust and Cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup update stable --no-prompt
-apt install cargo
+apt install cargo -y
 # Install bore-cli using Cargo
 cargo install bore-cli
 
